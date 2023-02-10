@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="shufflestuff_products_action" model="ir.actions.act_window">
+        <field name="name">Products</field>
+        <field name="res_model">shufflestuff.products</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No products to show!
+            </p>
+        </field>
+    </record>
+
+    <!-- Product List View -->
+    <record id="shufflestuff_products_view_list" model="ir.ui.view">
+        <field name="name">Products</field>
+        <field name="model">shufflestuff.products</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Products">
+                <field name="name"/>
+                <field name="customer_id"/>
+                <field name="quality"/>
+                <field name="usage"/>
+                <field name="status"/>
+                <field name="category_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="shufflestuff_products_view_form" model="ir.ui.view">
+        <field name="name">ShuffleStuff Products</field>
+        <field name="model">shufflestuff.products</field>
+        <field name="arch" type="xml">
+            <form string="Channel">
+                <sheet>
+                    
+                        <field name="image" nolabel='1' widget="image" class="oe_avatar"/>
+                        <label for="name" string="Product Name"/>
+                        <h1><field name="name" placeholder="New Product"/></h1>
+                        <group col="2">
+                            <group>
+                                <field name="customer_id"/>
+                                <field name="customer_mobile"/>
+                            </group>
+                            <group>
+                                <field name="date"/>
+                            </group>
+                        </group>
+                  
+                    <notebook>
+                        <page string="Product Details">
+                            <group col='2'>
+                                <group>
+                                    <field name="brand"/>
+                                    <field name="category_id"/>
+                                    <field name="description"/>
+                                </group>
+                                <group>
+                                    <field name="tag_id" widget="many2many_tags" nolabel="1" placeholder="Product Tags" class="oe_inline" colspan="2"/>
+                                    <field name="price"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="About">
+                            <group>
+                                <field name="quality"/>
+                                <field name="usage"/>
+                                <field name="status"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    
+
+
+    </odoo>

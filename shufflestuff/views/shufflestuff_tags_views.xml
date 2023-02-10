@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="shufflestuff_tags_action" model="ir.actions.act_window">
+        <field name="name">Tags</field>
+        <field name="res_model">shufflestuff.tags</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No tags to show!
+            </p>
+        </field>
+    </record>
+
+    <record id="shufflestuff_tags_views_list" model="ir.ui.view">
+        <field name="name">Tags</field>
+        <field name="model">shufflestuff.tags</field>
+        <field name="arch" type="xml">
+            <tree string="Tags">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="shufflestuff_tags_views_form" model="ir.ui.view">
+        <field name="name">Tags</field>
+        <field name="model">shufflestuff.tags</field>
+        <field name="arch" type="xml">
+            <form string="Form">
+                <sheet>
+                    <group>
+                        <h1><field name="name" nolabel="1" class="oe_inline" placeholder="Product Tags"/></h1>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

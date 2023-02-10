@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <menuitem id="shufflestuff_menu_root" name="ShuffleStuff">
+        <menuitem id="shufflestuff_customer" name="Customer">
+            <menuitem id="customer" action="shufflestuff_customer_action"/>
+        </menuitem>
+        <menuitem id="shufflestuff_products" name="Products">
+            <menuitem id="products" action="shufflestuff_products_action"/>
+            <menuitem id="categories" action="shufflestuff_categories_action"/>
+            <menuitem id="tags" action="shufflestuff_tags_action"/>
+            <menuitem id="pricelists" action="shufflestuff_pricelists_action"/>
+        </menuitem>
+    </menuitem>
+
+</odoo>
