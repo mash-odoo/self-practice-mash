@@ -67,17 +67,31 @@
                         <page string="Product Condition">
                             <group>
                                 <field name="quality"/>
+
                                 <button type="object" string="A1" name="icon1_i" icon="fa-star-o" attrs="{'invisible':[('icon_1visi','=',False)]}"/>
                                 <button type="object" string="A1" name="icon1_v" icon="fa-star" attrs="{'invisible':[('icon_1visi','=',True)]}"/>
-                                <button type="object" string="A2" name="icon2_i" icon="fa-star-o" attrs="{'invisible':[('icon_1visi','=',False)]}"/>
-                                <button type="object" string="A2" name="icon2_v" icon="fa-star" attrs="{'invisible':[('icon_1visi','=',True)]}"/>
-                                <button type="object" string="A3" name="icon3_i" icon="fa-star-o" attrs="{'invisible':[('icon_1visi','=',False)]}"/>
-                                <button type="object" string="A3" name="icon3_v" icon="fa-star" attrs="{'invisible':[('icon_1visi','=',True)]}"/>
-                                <button type="object" string="A4" name="icon4_i" icon="fa-star-o" attrs="{'invisible':[('icon_1visi','=',False)]}"/>
-                                <button type="object" string="A4" name="icon4_v" icon="fa-star" attrs="{'invisible':[('icon_1visi','=',True)]}"/>
-                                <button type="object" string="A5" name="icon5_i" icon="fa-star-o" attrs="{'invisible':[('icon_1visi','=',False)]}"/>
-                                <button type="object" string="A5" name="icon5_v" icon="fa-star" attrs="{'invisible':[('icon_1visi','=',True)]}"/><br/>
-                                <field name="icon_1visi" invisible="1"/>
+
+                                <field name="icon_1visi"/>
+                                <!-- <button type="object" string="A1" name="icon1_i" icon="fa-star-o" attrs="{'invisible':[('icon_1visi','=',False)]}"/>
+                                <button type="object" string="A1" name="icon1_v" icon="fa-star" attrs="{'invisible':[('icon_1visi','=',True)]}"/>
+
+                                <button type="object" string="A2" name="icon2_i" icon="fa-star-o" attrs="{'invisible':[('icon_2visi','=',False)]}"/>
+                                <button type="object" string="A2" name="icon2_v" icon="fa-star" attrs="{'invisible':[('icon_2visi','=',True)]}"/>
+
+                                <button type="object" string="A3" name="icon3_i" icon="fa-star-o" attrs="{'invisible':[('icon_3visi','=',False)]}"/>
+                                <button type="object" string="A3" name="icon3_v" icon="fa-star" attrs="{'invisible':[('icon_3visi','=',True)]}"/>
+
+                                <button type="object" string="A4" name="icon4_i" icon="fa-star-o" attrs="{'invisible':[('icon_4visi','=',False)]}"/>
+                                <button type="object" string="A4" name="icon4_v" icon="fa-star" attrs="{'invisible':[('icon_4visi','=',True)]}"/>
+
+                                <button type="object" string="A5" name="icon5_i" icon="fa-star-o" attrs="{'invisible':[('icon_5visi','=',False)]}"/>
+                                <button type="object" string="A5" name="icon5_v" icon="fa-star" attrs="{'invisible':[('icon_5visi','=',True)]}"/><br/> -->
+
+                                <!-- <field name="icon_1visi" invisible="1"/>
+                                <field name="icon_2visi" invisible="1"/>
+                                <field name="icon_3visi" invisible="1"/>
+                                <field name="icon_4visi" invisible="1"/>
+                                <field name="icon_5visi" invisible="1"/> -->
 
                                 <field name="usage"/>
                                 <field name="status"/>
