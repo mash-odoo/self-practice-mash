@@ -1,4 +1,5 @@
 from odoo import models,fields,api
+from odoo.addons.helpdesk.models.helpdesk_ticket import TICKET_PRIORITY
 
 class ShufflestuffProduct(models.Model):
     _name = 'shufflestuff.products'
@@ -33,60 +34,43 @@ class ShufflestuffProduct(models.Model):
     mobile = fields.Char()
     email = fields.Char()
     country = fields.Char() 
+
+    priority = fields.Selection(
+        TICKET_PRIORITY, string='Priority',
+        default='0', required=True)
+
     
-    icon_1visi = fields.Boolean(default=True)
-    icon_2visi = fields.Boolean(default=True)
-    icon_3visi = fields.Boolean(default=True)
-    icon_4visi = fields.Boolean(default=True)
-    icon_5visi = fields.Boolean(default=True)
+    # icon_1visi = fields.Boolean(default=True)
+    # icon_2visi = fields.Boolean(default=True)
 
-    icon_1visi = fields.Boolean()
-
-    def icon1_i(self):
-        self.icon_1visi = False
-
-    def icon1_v(self):
-        self.icon_1visi = True
-
-    # stars = [icon_1visi, icon_2visi, icon_3visi, icon_4visi, icon_5visi]
+    # iconFields = [icon_1visi, icon_2visi]
 
     # def icon1_i(self):
     #     for i in range(1):
-    #         self.stars[i].invisible = True
+    #         self.iconFields[i] = False
 
-    # def icon2_i(self):
-    #     for i in range(2):
-    #         self.stars[i].invisible = True
-
-    # def icon3_i(self):
-    #     for i in range(3):
-    #         self.stars[i].invisible = True
-
-    # def icon4_i(self):
-    #     for i in range(4):
-    #         self.stars[i].invisible = True
-
-    # def icon5_i(self):
-    #     for i in range(5):
-    #         self.stars[i].invisible = True
+    #     for i in range(1,len(self.iconFields)):
+    #         self.iconFields[i] = True
 
     # def icon1_v(self):
     #     for i in range(1):
-    #         self.stars[i].invisible = False
+    #         self.iconFields[i] = True
+
+    #     for i in range(1,len(self.iconFields)):
+    #         self.iconFields[i] = False
+
+    # def icon2_i(self):
+    #     for i in range(2):
+    #         self.iconFields[i] = False
+
+    #     for i in range(2,len(self.iconFields)):
+    #         self.iconFields[i] = True
 
     # def icon2_v(self):
     #     for i in range(2):
-    #         self.stars[i].invisible = False
+    #         self.iconFields[i] = True
 
-    # def icon3_v(self):
-    #     for i in range(3):
-    #         self.stars[i].invisible = False
+    #     for i in range(2,len(self.iconFields)):
+    #         self.iconFields[i] = False
 
-    # def icon4_v(self):
-    #     for i in range(4):
-    #         self.stars[i].invisible = False
-
-    # def icon5_v(self):
-    #     for i in range(5):
-    #         self.stars[i].invisible = False
-    
+        

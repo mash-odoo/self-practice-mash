@@ -67,11 +67,18 @@
                         <page string="Product Condition">
                             <group>
                                 <field name="quality"/>
+                                <field name="priority" optional="show" widget="priority"/>
 
-                                <button type="object" string="A1" name="icon1_i" icon="fa-star-o" attrs="{'invisible':[('icon_1visi','=',False)]}"/>
+                                <!-- <button type="object" string="A1" name="icon1_i" icon="fa-star-o" attrs="{'invisible':[('icon_1visi','=',False)]}"/>
                                 <button type="object" string="A1" name="icon1_v" icon="fa-star" attrs="{'invisible':[('icon_1visi','=',True)]}"/>
 
-                                <field name="icon_1visi"/>
+                                <field name="icon_1visi" invisible="1"/>
+
+                                <button type="object" string="A2" name="icon2_i" icon="fa-star-o" attrs="{'invisible':[('icon_2visi','=',False)]}"/>
+                                <button type="object" string="A2" name="icon2_v" icon="fa-star" attrs="{'invisible':[('icon_2visi','=',True)]}"/>
+
+                                <field name="icon_2visi" invisible="1"/> -->
+
                                 <!-- <button type="object" string="A1" name="icon1_i" icon="fa-star-o" attrs="{'invisible':[('icon_1visi','=',False)]}"/>
                                 <button type="object" string="A1" name="icon1_v" icon="fa-star" attrs="{'invisible':[('icon_1visi','=',True)]}"/>
 
