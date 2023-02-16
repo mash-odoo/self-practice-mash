@@ -1,4 +1,4 @@
-from odoo import models,fields
+from odoo import models,fields,api
 
 class ShufflestuffProduct(models.Model):
     _name = 'shufflestuff.products'
@@ -29,3 +29,27 @@ class ShufflestuffProduct(models.Model):
     ], string='Status', default='reselling', required=True)
     date = fields.Date("Date", default=lambda self:fields.Date.today())
     image = fields.Binary()
+
+    mobile = fields.Char()
+    email = fields.Char()
+    country = fields.Char() 
+    
+    icon = fields.Char()
+    icon_color = fields.Char()
+                
+    # def change_icon_color(self):
+    #     self.write({'icon': 'fa-star', 'icon_color': 'yellow'})
+
+    # def change_icon_color(self):
+    #     if self.icon=='fa-times':
+    #         print("hi")
+    #         self.icon='fa-check'
+
+    icon_1visi = fields.Boolean(default=True)
+
+    def icon_1(self):
+        self.icon_1visi=False
+
+    def icon_2(self):
+        self.icon_1visi=True
+    

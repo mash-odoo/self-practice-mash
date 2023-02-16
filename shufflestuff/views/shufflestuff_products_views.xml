@@ -64,11 +64,27 @@
                                 </group>
                             </group>
                         </page>
-                        <page string="About">
+                        <page string="Product Condition">
                             <group>
                                 <field name="quality"/>
+                                <button type="object" string="A1" name="icon_1" icon="fa-star-o" attrs="{'invisible':[('icon_1visi','=',False)]}"/>
+                                <button type="object" string="A1" name="icon_2" icon="fa-star" attrs="{'invisible':[('icon_1visi','=',True)]}"/>
+                                <field name="icon_1visi" invisible="1"/>
+                                    <!--<button name="change_icon_color" string="A1" type="object" icon="icon"/><br/>
+                                    <button name="change_icon_color" string="A2" type="object" icon="fa-star-o"/>
+                                    <button name="change_icon_color" string="A3" type="object" icon="fa-star-o"/>
+                                    <button name="change_icon_color" string="A4" type="object" icon="fa-star-o"/>
+                                    <button name="change_icon_color" string="A5" type="object" icon="fa-star-o"/> -->
+                               
                                 <field name="usage"/>
                                 <field name="status"/>
+                            </group>
+                        </page>
+                        <page string="Product Owner">
+                            <group>
+                                <field name="mobile"/>
+                                <field name="email"/>
+                                <field name="country"/>
                             </group>
                         </page>
                     </notebook>

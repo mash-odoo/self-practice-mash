@@ -8,5 +8,3 @@ class ShufflestuffCategories(models.Model):
 
     
 
-    
-

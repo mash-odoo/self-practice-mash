@@ -5,8 +5,6 @@ class Shufflestuff(models.Model):
     _description = "Model for Upcycling"
 
     name = fields.Char()
-    is_seller = fields.Boolean(string='Is Seller', default=False)
-    occupation = fields.Char(default="Software Developer")
     company_name = fields.Char()
     street_1 = fields.Text()
     street_2 = fields.Text()
@@ -16,7 +14,7 @@ class Shufflestuff(models.Model):
     postcode = fields.Char()
     phone = fields.Char()
     mobile = fields.Char()
-    email = fields.Text()
+    email = fields.Char()
     website = fields.Text()
 
 
