@@ -34,8 +34,40 @@ class ShufflestuffProduct(models.Model):
     email = fields.Char()
     country = fields.Char() 
     
-    icon = fields.Char()
-    icon_color = fields.Char()
+    icon1_i = fields.Boolean()
+    icon2_i = fields.Boolean()
+    icon3_i = fields.Boolean()
+    icon4_i = fields.Boolean()
+    icon5_i = fields.Boolean()
+    icon1_v = fields.Boolean()
+    icon2_v = fields.Boolean()
+    icon3_v = fields.Boolean()
+    icon4_v = fields.Boolean()
+    icon5_v = fields.Boolean()
+    # icon1_v,icon2_v,icon3_v,icon4_v,icon5_v = fields.Char()
+
+    stars_i = [icon1_i,icon2_i,icon3_i,icon4_i,icon5_i]
+    stars_v = [icon1_v,icon2_v,icon3_v,icon4_v,icon5_v]
+
+    def icon1_i(self):
+        for i in range(1):
+            self.icon1_i[i].invisible = False
+
+    def icon2_i(self):
+        for i in range(2):
+            self.icon1_i[i].invisible = False
+
+    def icon3_i(self):
+        for i in range(3):
+            self.icon1_i[i].invisible = False
+
+    def icon4_i(self):
+        for i in range(4):
+            self.icon1_i[i].invisible = False
+
+    def icon5_i(self):
+        for i in range(5):
+            self.icon1_i[i].invisible = False
                 
     # def change_icon_color(self):
     #     self.write({'icon': 'fa-star', 'icon_color': 'yellow'})

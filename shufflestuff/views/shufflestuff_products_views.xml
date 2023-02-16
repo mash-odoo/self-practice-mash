@@ -67,15 +67,18 @@
                         <page string="Product Condition">
                             <group>
                                 <field name="quality"/>
-                                <button type="object" string="A1" name="icon_1" icon="fa-star-o" attrs="{'invisible':[('icon_1visi','=',False)]}"/>
-                                <button type="object" string="A1" name="icon_2" icon="fa-star" attrs="{'invisible':[('icon_1visi','=',True)]}"/>
+                                <button type="object" string="A1" name="icon1_i" icon="fa-star-o" attrs="{'invisible':[('icon_1visi','=',False)]}"/>
+                                <button type="object" string="A1" name="icon1_v" icon="fa-star" attrs="{'invisible':[('icon_1visi','=',True)]}"/>
+                                <button type="object" string="A2" name="icon2_i" icon="fa-star-o" attrs="{'invisible':[('icon_1visi','=',False)]}"/>
+                                <button type="object" string="A2" name="icon2_v" icon="fa-star" attrs="{'invisible':[('icon_1visi','=',True)]}"/>
+                                <button type="object" string="A3" name="icon3_i" icon="fa-star-o" attrs="{'invisible':[('icon_1visi','=',False)]}"/>
+                                <button type="object" string="A3" name="icon3_v" icon="fa-star" attrs="{'invisible':[('icon_1visi','=',True)]}"/>
+                                <button type="object" string="A4" name="icon4_i" icon="fa-star-o" attrs="{'invisible':[('icon_1visi','=',False)]}"/>
+                                <button type="object" string="A4" name="icon4_v" icon="fa-star" attrs="{'invisible':[('icon_1visi','=',True)]}"/>
+                                <button type="object" string="A5" name="icon5_i" icon="fa-star-o" attrs="{'invisible':[('icon_1visi','=',False)]}"/>
+                                <button type="object" string="A5" name="icon5_v" icon="fa-star" attrs="{'invisible':[('icon_1visi','=',True)]}"/><br/>
                                 <field name="icon_1visi" invisible="1"/>
-                                    <!--<button name="change_icon_color" string="A1" type="object" icon="icon"/><br/>
-                                    <button name="change_icon_color" string="A2" type="object" icon="fa-star-o"/>
-                                    <button name="change_icon_color" string="A3" type="object" icon="fa-star-o"/>
-                                    <button name="change_icon_color" string="A4" type="object" icon="fa-star-o"/>
-                                    <button name="change_icon_color" string="A5" type="object" icon="fa-star-o"/> -->
-                               
+
                                 <field name="usage"/>
                                 <field name="status"/>
                             </group>
