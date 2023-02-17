@@ -6,6 +6,7 @@ class ShufflestuffProduct(models.Model):
     _description='Products'
 
     name = fields.Char(string='Name', required=True)
+    id = fields.Char()
     description = fields.Text()
     brand = fields.Char()
     customer_id = fields.Many2one('shufflestuff', string='Customer')
@@ -27,7 +28,7 @@ class ShufflestuffProduct(models.Model):
         ('reselling', 'Reselling'),
         ('maintenance', 'Maintenance'),
         ('scrapping', 'Scrapping'),
-    ], string='Status', default='reselling', required=True)
+    ], string='Status', compute="compute_status")
     date = fields.Date("Date", default=lambda self:fields.Date.today())
     image = fields.Binary()
 
@@ -35,42 +36,35 @@ class ShufflestuffProduct(models.Model):
     email = fields.Char()
     country = fields.Char() 
 
-    priority = fields.Selection(
-        TICKET_PRIORITY, string='Priority',
-        default='0', required=True)
+    RATING = [
+    ('0','Quality'),
+    ('1', 'Worst'),
+    ('2', 'Bad'),
+    ('3', 'Average'),
+    ('4', 'Good'),
+    ('5','Best')
+    ]
+
+    rating = fields.Selection(RATING,string="Rating")
+
+    @api.depends('rating','usage')
+    def compute_status(self):
+        for records in self:
+            if records.rating in ['4','5'] and records.usage=='less':
+                records.status = 'reselling'
+            elif records.rating in ['4','5'] and records.usage=='average':
+                records.status = 'reselling'
+            elif records.rating in ['4','5'] and records.usage=='extensive':
+                records.status = 'maintenance'
+            elif records.rating in ['2','3'] and records.usage=='less':
+                records.status = 'maintenance'
+            elif records.rating in ['2','3'] and records.usage=='average':
+                records.status = 'maintenance'
+            elif records.rating in ['2','3'] and records.usage=='extensive':
+                records.status = 'scrapping'
+            else:
+                records.status = 'scrapping'
+
 
     
-    # icon_1visi = fields.Boolean(default=True)
-    # icon_2visi = fields.Boolean(default=True)
-
-    # iconFields = [icon_1visi, icon_2visi]
-
-    # def icon1_i(self):
-    #     for i in range(1):
-    #         self.iconFields[i] = False
-
-    #     for i in range(1,len(self.iconFields)):
-    #         self.iconFields[i] = True
-
-    # def icon1_v(self):
-    #     for i in range(1):
-    #         self.iconFields[i] = True
-
-    #     for i in range(1,len(self.iconFields)):
-    #         self.iconFields[i] = False
-
-    # def icon2_i(self):
-    #     for i in range(2):
-    #         self.iconFields[i] = False
-
-    #     for i in range(2,len(self.iconFields)):
-    #         self.iconFields[i] = True
-
-    # def icon2_v(self):
-    #     for i in range(2):
-    #         self.iconFields[i] = True
-
-    #     for i in range(2,len(self.iconFields)):
-    #         self.iconFields[i] = False
-
         
