@@ -25,9 +25,9 @@ class ShufflestuffProduct(models.Model):
         ('extensive', 'Extensive'),
     ], string='Usage', default='less', required=True)
     status = fields.Selection([
-        ('reselling', 'Reselling'),
         ('maintenance', 'Maintenance'),
         ('scrapping', 'Scrapping'),
+        ('reselling', 'Reselling')
     ], string='Status', compute="compute_status")
     date = fields.Date("Date", default=lambda self:fields.Date.today())
     image = fields.Binary()
