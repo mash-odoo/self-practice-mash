@@ -27,6 +27,7 @@
                 <field name="customer_id"/>
                 <field name="rating" widget="priority"/>
                 <field name="usage"/>
+                <field name="price"/>
                 <field name="status"/>
                 <field name="category_id"/>
             </tree>
@@ -48,7 +49,7 @@
                     <group col="2">
                         <group>
                             <field name="customer_id"/>
-                            <field name="customer_mobile"/>
+                            <field name="mobile"/>
                         </group>
                         <group>
                             <field name="date"/>
