@@ -1,1 +1,1 @@
-from . import shufflestuff,shufflestuff_products,shufflestuff_categories,shufflestuff_tags
+from . import shufflestuff,shufflestuff_products,shufflestuff_categories,shufflestuff_tags,shufflestuff_orders

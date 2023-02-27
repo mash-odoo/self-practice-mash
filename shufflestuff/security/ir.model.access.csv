@@ -3,3 +3,4 @@ hufflestuff.access_shufflestuff,access_shufflestuff,shufflestuff.model_shufflest
 shufflestuff.access_shufflestuff_products,access_shufflestuff_products,shufflestuff.model_shufflestuff_products,base.group_user,1,1,1,1
 shufflestuff.access_shufflestuff_categories,access_shufflestuff_categories,shufflestuff.model_shufflestuff_categories,base.group_user,1,1,1,1
 shufflestuff.access_shufflestuff_tags,access_shufflestuff_tags,shufflestuff.model_shufflestuff_tags,base.group_user,1,1,1,1
+estate.access_base_property,access_base_property,estate.model_base_property,base.group_user,1,1,1,1
