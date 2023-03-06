@@ -12,9 +12,9 @@
             <menuitem id="tags" action="shufflestuff_tags_action"/>
             <menuitem id="pricelists" action="shufflestuff_pricelists_action"/>
         </menuitem>
-        <menuitem id="shufflestuff_orders" name="Sales">
-            <menuitem id="orders" action="shufflestuff_orders_action"/>
-        </menuitem>
+        <!-- <menuitem id="shufflestuff_orders" name="Sales">
+            <menuitem id="orders" action="sale_order_view_form"/>
+        </menuitem> -->
     </menuitem>
 
 </odoo>

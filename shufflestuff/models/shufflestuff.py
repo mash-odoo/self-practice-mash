@@ -4,7 +4,7 @@ class Shufflestuff(models.Model):
     _name = "shufflestuff"
     _description = "Model for Upcycling"
 
-    name = fields.Char()
+    name = fields.Many2one("res.partner")
     company_name = fields.Char()
     street_1 = fields.Text()
     street_2 = fields.Text()
